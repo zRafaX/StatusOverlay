@@ -115,20 +115,20 @@ struct OverlayConfig {
     bool showCpuTemp = true;
     bool showGpuUsage = true;
     bool showGpuTemp = true;
-    bool showVRAM = true;     // Uso de VRAM da GPU
+    bool showVRAM = true;     
     bool showRAM = true;
-    bool showProcessName = true; // Rótulo do processo/jogo rastreado (todos os layouts)
+    bool showProcessName = true; 
     int  layoutStyle = LAYOUT_VERTICAL;
-    bool useFahrenheit = false; // false = Celsius, true = Fahrenheit
-    bool autoStart = false;   // Pular janela de configuração e iniciar o overlay imediatamente
-    int  position = POS_TOP_LEFT; // Constantes POS_*
-    int  opacity = 85;       // 30..100 % opacidade do fundo do overlay (todos os layouts)
+    bool useFahrenheit = false; 
+    bool autoStart = false;   
+    int  position = POS_TOP_LEFT; 
+    int  opacity = 85;      
     int  toggleKey = VK_INSERT;
     int  exitKey = VK_END;
-    float customX = -1.0f;    // Posição personalizada (-1 = usar canto predefinido)
+    float customX = -1.0f;  
     float customY = -1.0f;
-    int  selectedGpu = 0;     // Índice da GPU selecionada (0 = primeira GPU)
-    int  overlayScale = 100;  // 50..200 % escala da UI para todos os layouts
+    int  selectedGpu = 0;     
+    int  overlayScale = 100; 
     bool showCpuFreq = false;
     bool showGpuCoreFreq = false;
     char cpuFreqPath[FREQ_PATH_MAX] = "";
@@ -2071,7 +2071,6 @@ static bool InitLHWM()
                         }
                     }
                     else if (sensorType == "Clock") {
-                        // Clocks de VRAM/memória são inconsistentes no LHWM; lista apenas clocks do núcleo da GPU.
                         if (IsGpuMemoryClockSensor(sensorName))
                             continue;
                         bool dup = false;

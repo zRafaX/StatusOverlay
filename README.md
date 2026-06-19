@@ -12,8 +12,6 @@ Dep: LibreHardwareMonitor (Open Source)
 
 ## ⬇️ Download
 
-Baixe a versão mais recente do **FPSeco**:
-
 - Windows 10/11: [Download FPSeco](https://github.com/zRafaX/FPSeco/releases/latest)
 
 > Extraia o `.zip` e execute `FPSeco.exe`.
